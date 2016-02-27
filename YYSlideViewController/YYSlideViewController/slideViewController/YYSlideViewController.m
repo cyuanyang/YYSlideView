@@ -42,11 +42,24 @@
     
     [self.view addSubview:_mainView];
     
+    /**test *****/
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    button.frame = CGRectMake(50, 100, 200, 30);
+    
+    button.backgroundColor = [UIColor blueColor];
+    
+    [button setTitle:@"click" forState:UIControlStateNormal];
+    
+    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.mainView addSubview:button];
+    
     self.coverView = [[UIView alloc]initWithFrame:self.view.frame];
     
     _coverView.backgroundColor = [UIColor blackColor];
-    _coverView.alpha = 0.1;
-    _coverView.hidden = YES;
+    _coverView.alpha = 0.0;
+//    _coverView.hidden = YES;
     [self.mainView addSubview:_coverView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
@@ -74,10 +87,10 @@
         
         if (_mainView.frame.origin.x == 0) {
              _state = SlideViewStateClosed;
-             _coverView.hidden = YES;
+             [self showOrHideCover:NO];
         }else if(_mainView.frame.origin.x == _slideView.slideWidth){
             _state = SlideViewStateOpened;
-             _coverView.hidden = NO;
+             [self showOrHideCover:YES];
         }
     }else if (pan.state == UIGestureRecognizerStateChanged){
         CGFloat detlaX = 0;
@@ -114,6 +127,7 @@
 
 -(void)tapAction{
     [self autoAnim:NO];
+    [self showOrHideCover:NO];
 }
 /*
  * open or close
@@ -137,13 +151,32 @@
       
         if (isOpen) {
             _state = SlideViewStateOpened;
-            _coverView.hidden = NO;
+//            [self showOrHideCover:YES];
         }else{
             _state = SlideViewStateClosed;
-            _coverView.hidden = YES;
+//           [self showOrHideCover:NO];
         }
         
     }];
+}
+/*
+ * show or hide cover
+ */
+-(void)showOrHideCover:(BOOL)isShow{
+    [UIView animateWithDuration:0.7 animations:^{
+        if (isShow) {
+            _coverView.alpha = 0.2;
+        }else{
+            _coverView.alpha = 0.0;
+        }
+    }];
+}
+
+
+-(void)click{
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"title" message:@"message" delegate:nil cancelButtonTitle:@"cancle" otherButtonTitles:@"enter", nil];
+    
+    [alertView show];
 }
 
 
