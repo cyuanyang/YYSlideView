@@ -163,7 +163,7 @@
  * show or hide cover
  */
 -(void)showOrHideCover:(BOOL)isShow{
-    [UIView animateWithDuration:0.7 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         if (isShow) {
             _coverView.alpha = 0.2;
         }else{
