@@ -31,4 +31,8 @@ typedef NS_ENUM(NSUInteger , SlideViewState) {
 /** state */
 @property(nonatomic,readonly)SlideViewState state;
 
+-(void)viewDidLoad;
+
+
+
 @end

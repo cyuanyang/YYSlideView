@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YYSlideViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : YYSlideViewController
 
 @end
 

@@ -42,24 +42,13 @@
     
     [self.view addSubview:_mainView];
     
-    /**test *****/
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    button.frame = CGRectMake(50, 100, 200, 30);
-    
-    button.backgroundColor = [UIColor blueColor];
-    
-    [button setTitle:@"click" forState:UIControlStateNormal];
-    
-    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.mainView addSubview:button];
+    [self.mainView addSubview:[self loadMainView]];
     
     self.coverView = [[UIView alloc]initWithFrame:self.view.frame];
     
     _coverView.backgroundColor = [UIColor blackColor];
     _coverView.alpha = 0.0;
-//    _coverView.hidden = YES;
+
     [self.mainView addSubview:_coverView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
@@ -70,7 +59,6 @@
     [self.view addGestureRecognizer:pan];
     
 }
-
 
 -(void)panAction:(UIPanGestureRecognizer *)pan{
     static CGFloat beginX = -1;
@@ -121,7 +109,6 @@
             slideRect.origin.x  = -_slideView.slideWidth/2;
         }
         _slideView.frame = slideRect;
-
     }
 }
 
@@ -151,12 +138,9 @@
       
         if (isOpen) {
             _state = SlideViewStateOpened;
-//            [self showOrHideCover:YES];
         }else{
             _state = SlideViewStateClosed;
-//           [self showOrHideCover:NO];
         }
-        
     }];
 }
 /*
@@ -173,12 +157,14 @@
 }
 
 
--(void)click{
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"title" message:@"message" delegate:nil cancelButtonTitle:@"cancle" otherButtonTitles:@"enter", nil];
+/*
+ * 加载的视图
+ */
+-(UIView *)loadMainView{
+   
     
-    [alertView show];
+    return nil;
 }
-
 
 
 @end

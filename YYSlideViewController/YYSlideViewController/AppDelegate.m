@@ -1,15 +1,15 @@
 //
 //  AppDelegate.m
 //  YYSlideViewController
-//
+//  
 //  Created by 陈远洋 on 2/27/16.
 //  Copyright © 2016 Sunny. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import "YYSlideViewController.h"
+#import "ViewController.h"
 #import "NormalView.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,7 +22,7 @@
     
     NormalView *view  = [[NormalView alloc]initWithWidth:200];
     
-    YYSlideViewController *vc = [[YYSlideViewController alloc]initWithSlideView:view];
+    ViewController *vc = [[ViewController alloc] initWithSlideView:view];
     
     self.window.rootViewController = vc;
     
