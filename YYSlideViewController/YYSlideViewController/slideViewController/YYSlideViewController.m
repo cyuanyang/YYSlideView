@@ -6,8 +6,9 @@
 //  Copyright © 2016 Sunny. All rights reserved.
 //
 
-#define AUTO_X (50)
+#define AUTO_X (50) //自动滚动的阈值
 #define ANIM_DUR (0.2)
+#define Is_Show_Cover NO ///不显示改成 >> NO
 
 #import "YYSlideViewController.h"
 
@@ -44,20 +45,23 @@
     
     [self.mainView addSubview:[self loadMainView]];
     
-    self.coverView = [[UIView alloc]initWithFrame:self.view.frame];
-    
-    _coverView.backgroundColor = [UIColor blackColor];
-    _coverView.alpha = 0.0;
-
-    [self.mainView addSubview:_coverView];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
-    [_coverView addGestureRecognizer:tap];
-    
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
     
     [self.view addGestureRecognizer:pan];
     
+    if (Is_Show_Cover) {
+        self.coverView = [[UIView alloc]initWithFrame:self.view.frame];
+        _coverView.backgroundColor = [UIColor blackColor];
+        _coverView.alpha = 0.0;
+        [self.mainView addSubview:_coverView];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
+        [_coverView addGestureRecognizer:tap];
+        
+        [_mainView insertSubview:[self loadMainView] belowSubview:_coverView];
+    }else{
+        [_mainView addSubview:[self loadMainView]];
+    }
+   
 }
 
 -(void)panAction:(UIPanGestureRecognizer *)pan{
@@ -90,7 +94,6 @@
             detlaX =_slideView.slideWidth + point.x - beginX;
         }
         
-      
         CGRect mainRect = _mainView.frame;
         mainRect.origin.x = detlaX;
         if (mainRect.origin.x >=_slideView.slideWidth) {
@@ -147,13 +150,15 @@
  * show or hide cover
  */
 -(void)showOrHideCover:(BOOL)isShow{
-    [UIView animateWithDuration:0.2 animations:^{
-        if (isShow) {
-            _coverView.alpha = 0.2;
-        }else{
-            _coverView.alpha = 0.0;
-        }
-    }];
+    if (Is_Show_Cover) {
+        [UIView animateWithDuration:0.2 animations:^{
+            if (isShow) {
+                _coverView.alpha = 0.2;
+            }else{
+                _coverView.alpha = 0.0;
+            }
+        }];
+    }
 }
 
 

@@ -20,7 +20,7 @@
     
     button.backgroundColor = [UIColor blueColor];
     
-    [button setTitle:@"click" forState:UIControlStateNormal];
+    [button setTitle:@"侧滑按钮" forState:UIControlStateNormal];
     
     [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     

@@ -74,9 +74,9 @@
 				9A82CB871C817937003D0DB5 /* AppDelegate.m */,
 				9A82CB891C817937003D0DB5 /* ViewController.h */,
 				9A82CB8A1C817937003D0DB5 /* ViewController.m */,
-				9A82CB831C817937003D0DB5 /* Supporting Files */,
 				9A82CBA41C817A68003D0DB5 /* NormalView.h */,
 				9A82CBA51C817A68003D0DB5 /* NormalView.m */,
+				9A82CB831C817937003D0DB5 /* Supporting Files */,
 			);
 			path = YYSlideViewController;
 			sourceTree = "<group>";

@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NormalView *view  = [[NormalView alloc]initWithWidth:200];
+    NormalView *view  = [[NormalView alloc]initWithWidth:300];
     
     ViewController *vc = [[ViewController alloc] initWithSlideView:view];
     

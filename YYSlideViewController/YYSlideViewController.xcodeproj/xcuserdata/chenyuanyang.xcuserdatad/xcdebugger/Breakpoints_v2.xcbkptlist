@@ -10,13 +10,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YYSlideViewController/slideViewController/YYSlideViewController.m"
-            timestampString = "478532677.208227"
+            timestampString = "484648194.46529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-tapAction"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YYSlideViewController/slideViewController/YYSlideViewController.m"
+            timestampString = "484648194.46529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-showOrHideCover:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[YYSlideViewController showOrHideCover:]"
+                  moduleName = "YYSlideViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenyuanyang/Documents/YYSlideView/YYSlideViewController/YYSlideViewController/slideViewController/YYSlideViewController.m"
+                  timestampString = "484648082.111467"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[YYSlideViewController showOrHideCover:]_block_invoke"
+                  moduleName = "YYSlideViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenyuanyang/Documents/YYSlideView/YYSlideViewController/YYSlideViewController/slideViewController/YYSlideViewController.m"
+                  timestampString = "484648082.111608"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

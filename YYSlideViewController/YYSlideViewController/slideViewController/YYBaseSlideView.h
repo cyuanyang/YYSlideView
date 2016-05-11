@@ -2,7 +2,7 @@
 //  YYBaseSlideView.h
 //  YYSlideViewController
 //
-//  Created by 陈远洋 on 2/27/16.
+//  Created by YY on 2/27/16.
 //  Copyright © 2016 Sunny. All rights reserved.
 //
 
